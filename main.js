@@ -5,12 +5,17 @@ import movieRoutes from './routes/movies.route.js'
 const app = express()
 const PORT = 6969
 
+// data understanding middleware
+app.use(express.json())
+
+
+// connectDB 
+connectDB();
+
 app.get("/", (req, res) => {
     res.json({ msg: 'Hello World!!' })
 })
 
-// connectDB 
-connectDB();
 
 // CRUD functionality of movies
 app.use('/movies', movieRoutes)

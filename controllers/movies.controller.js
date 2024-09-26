@@ -5,7 +5,12 @@ export const MovieGet = (req, res) => {
 
 
 export const MovieCreate = (req, res) => {
-    res.send("Create movies")
+
+    // id, title, description
+    console.log(req.body)
+    // Create the movie info
+
+    return res.json(req.body)
 }
 
 
